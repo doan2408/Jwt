@@ -7,9 +7,11 @@ CREATE TABLE users (
     password NVARCHAR(255) NOT NULL,
     email NVARCHAR(100) UNIQUE,
     enabled BIT DEFAULT 1,
+	provider NVARCHAR(20) DEFAULT 'LOCAL',
     created_at DATETIME DEFAULT GETDATE(),
     updated_at DATETIME DEFAULT GETDATE()
 );
+
 
 
 CREATE TABLE roles (
